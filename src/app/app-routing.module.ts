@@ -6,7 +6,7 @@ const routes: Routes = [
   loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)},
   {path: 'news',
   loadChildren: () => import('./modules/news-feed/news-feed.module').then(m => m.NewsFeedModule)},
-  {path: '', redirectTo: '/auth',pathMatch: 'full'}
+  {path: '', redirectTo: '/auth/signin',pathMatch: 'full'}
 ];
 
 @NgModule({
