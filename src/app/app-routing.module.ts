@@ -6,12 +6,6 @@ import { SigninComponent } from './modules/auth/components/signin/signin.compone
 import { SignupComponent } from './modules/auth/components/signup/signup.component';
 
 const routes: Routes = [
-  // {path: 'auth',
-  // loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)},
-  // {path: 'news',
-  // loadChildren: () => import('./modules/news-feed/news-feed.module').then(m => m.NewsFeedModule)},
-  // {path: '',
-  // loadChildren: () => import('./modules/auth/auth.module').then(m=>m.AuthModule)}
   {path:'auth',component:AuthenticationPageComponent,
   children:[
     {path:'signin',component:SigninComponent},
