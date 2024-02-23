@@ -6,11 +6,13 @@ import { SignupComponent } from './modules/auth/components/signup/signup.compone
 import { NewsPageComponent } from './modules/news-feed/pages/news-page/news-page.component';
 
 const routes: Routes = [
-  {path: 'auth',
-  loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)},
-  {path: 'news',
-  loadChildren: () => import('./modules/news-feed/news-feed.module').then(m => m.NewsFeedModule)},
-  {path: '', redirectTo: '/auth/signin',pathMatch: 'full'}
+  {path:'auth',component:AuthenticaionPageComponent,
+  children:[
+    {path:'signin',component:SigninComponent},
+    {path:'signup',component:SignupComponent}
+  ]},
+  {path:'news',component:NewsPageComponent},
+  {path:'',redirectTo:'auth/signin',pathMatch:'full'}
 ];
 
 @NgModule({
