@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SigninComponent } from './modules/auth/components/signin/signin.component';
 import { SignupComponent } from './modules/auth/components/signup/signup.component';
-import { AuthenticaionPageComponent } from './authenticaion-page/authenticaion-page.component';
-import { NewsPageComponent } from './news-page/news-page.component';
+import { AuthenticaionPageComponent } from './modules/auth/pages/authenticaion-page/authenticaion-page.component';
+import { NewsPageComponent } from './modules/news-feed/pages/news-page/news-page.component';
 
 @NgModule({
   declarations: [
