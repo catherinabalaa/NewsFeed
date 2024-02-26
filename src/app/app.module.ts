@@ -8,6 +8,13 @@ import { SignupComponent } from './modules/auth/components/signup/signup.compone
 import { AuthenticaionPageComponent } from './modules/auth/pages/authenticaion-page/authenticaion-page.component';
 import { NewsPageComponent } from './modules/news-feed/pages/news-page/news-page.component';
 
+import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatCardModule} from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,9 +25,16 @@ import { NewsPageComponent } from './modules/news-feed/pages/news-page/news-page
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatButtonModule,
+    MatCardModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
