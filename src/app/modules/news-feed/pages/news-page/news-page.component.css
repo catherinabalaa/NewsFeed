@@ -7,11 +7,24 @@
     height: 45vh;
     background-position: center;
     background-position-y: 40%;
+    padding-top: 1%;
+    padding-left: 2%;
 }
 
 #logo {
     position:relative;
-    padding-top: 1%;
-    padding-left: 1%;
+
     width: 15vw;
+}
+
+#cards {
+    margin-top: 3%;
+}
+
+.headline {
+    color: white;
+    font-size: 42px;
+    position: relative;
+    padding-left: 7%;
+    padding-top: 5%;
 }
