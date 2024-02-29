@@ -18,6 +18,8 @@ import {MatInputModule} from '@angular/material/input';
 import { LatestNewsComponent } from './modules/news-feed/components/latest-news/latest-news.component';
 import { DialogComponent } from './modules/news-feed/components/dialog/dialog.component';
 
+import {MatIconModule} from '@angular/material/icon';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,8 @@ import { DialogComponent } from './modules/news-feed/components/dialog/dialog.co
     MatDialogModule,
     MatFormFieldModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule
   ],
   providers: [
     provideAnimationsAsync()
