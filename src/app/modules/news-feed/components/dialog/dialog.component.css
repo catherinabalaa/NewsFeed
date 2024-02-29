@@ -1,27 +1,13 @@
 .img {
     border-radius: 5%;
-    /* margin-bottom: 5%; */
     margin-top: 7%;
-    /* width: auto;
-    size: contain; */
     max-width: 40vh;
     margin-left: 7%;
-    /* max-height: 60vh; */
     position: absolute;
 }
 
-/* .row {
-    padding-left: 5%;
-} */
-
-/* .col-sm-6 {
-    margin-right: 20%;
-    margin-left: 5%;
-} */
-
 mat-dialog-content {
     max-width:100vh;
-    /* max-height: 60vh; */
     margin-left: -2%;
 }
 
@@ -48,15 +34,3 @@ p{
 .goto {
     margin-left: -2%;
 }
-
-/* .card {
-    padding:7%;
-    padding-top: 2%;
-    text-align: left;
-    margin-bottom: 20%; 
-    width: 45vw; 
-    height: auto;
-    width:50vw;
-    height: auto;
-    border-radius: 5%;
-} */
