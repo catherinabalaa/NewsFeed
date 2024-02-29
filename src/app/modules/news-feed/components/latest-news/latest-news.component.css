@@ -17,17 +17,19 @@
     width: 18vw;
     height: auto;
     border-radius: 5%;
+    margin-left: -5%;
 }
 
 mat-card-content {
     margin-bottom: 5%;
 }
 
- .container {
-    margin-left: 10%;
+ .container-fluid {
+    padding-left: 5%;
 }
 
 
 .col-md-3 {
    align-content: center;
+   /* margin-right: 3%; */
 }
