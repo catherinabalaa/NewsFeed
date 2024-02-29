@@ -11,6 +11,6 @@ export class LatestNewsComponent {
   constructor(private matDialog:MatDialog) {}
 
   openDialog() {
-    this.matDialog.open(DialogComponent)
+    this.matDialog.open(DialogComponent);
   }
 }
