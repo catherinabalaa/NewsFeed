@@ -1,0 +1,33 @@
+.headline{
+    margin-bottom: 3%;
+}
+
+.img {
+    border-radius: 5%;
+    margin-bottom: 5%;
+    width: 15vw;
+    position: relative;
+}
+
+.card {
+    padding:7%;
+    padding-top: 2%;
+    text-align: left;
+    margin-bottom: 20%;
+    width: 18vw;
+    height: auto;
+    border-radius: 5%;
+}
+
+mat-card-content {
+    margin-bottom: 5%;
+}
+
+ .container {
+    margin-left: 10%;
+}
+
+
+.col-md-3 {
+   align-content: center;
+}

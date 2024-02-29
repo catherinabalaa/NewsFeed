@@ -15,6 +15,8 @@ import {MatCardModule} from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {MatInputModule} from '@angular/material/input';
+import { LatestNewsComponent } from './modules/news-feed/components/latest-news/latest-news.component';
+import { DialogComponent } from './modules/news-feed/components/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import {MatInputModule} from '@angular/material/input';
     SigninComponent,
     SignupComponent,
     AuthenticaionPageComponent,
-    NewsPageComponent
+    NewsPageComponent,
+    LatestNewsComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
