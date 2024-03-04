@@ -17,8 +17,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import {MatInputModule} from '@angular/material/input';
 import { LatestNewsComponent } from './modules/news-feed/components/latest-news/latest-news.component';
 import { DialogComponent } from './modules/news-feed/components/dialog/dialog.component';
-
 import {MatIconModule} from '@angular/material/icon';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatFormFieldModule,
     FormsModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [
     provideAnimationsAsync()
