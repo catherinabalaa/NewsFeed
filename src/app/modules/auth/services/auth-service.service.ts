@@ -6,6 +6,7 @@ import { environment } from '../../../../environments/environment';
 import { Observable } from 'rxjs';
 import { SigninResponse } from '../models/signinResponse.model';
 import { SigninRequest } from '../models/signinRequest.model';
+import { LogoutRequest } from '../models/logoutRequest.model';
 
 @Injectable({
   providedIn: 'root'
@@ -22,4 +23,17 @@ export class AuthServiceService {
     //   this.router.navigateByUrl('/news');
     // });
   }
+
+  public getToken() {
+    return localStorage.getItem(this.tokenKey);
+  }
+
+  public logout(token:string,refreshToken:string):Observable<LogoutRequest> {
+    return this.http.post<LogoutRequest>(environment.apiUrl+'User/Logout()',{Token:token,RefreshToken:refreshToken});
+  } //do we need it?
+
+  public getRefreshToken() {
+    return localStorage.getItem('refreshtoken');
+  }
+
 }

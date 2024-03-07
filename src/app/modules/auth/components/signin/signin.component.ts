@@ -24,8 +24,24 @@ export class SigninComponent {
       ) =>{
       if(res.Result) {
         localStorage.setItem('loginToken',res.Token);
+        localStorage.setItem('refreshToken',res.RefreshToken);
         this.router.navigateByUrl('/news');
+      }
+      else {
+        alert("Username or password incorrect");
       }
     })
   }
+
+  // logout() {
+  //   this.authServiceService.logout(this.authServiceService.getToken(),this.authServiceService.getRefreshToken()).subscribe(
+  //     localStorage.clear();
+  //     this.router.navigateByUrl('/auth/signin');
+  //   )
+  // }
+
+  // logout() {
+  //   localStorage.clear();
+  //   this.router.navigateByUrl('/auth/signin');
+  // }
 }
