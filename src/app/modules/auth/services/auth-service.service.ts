@@ -3,6 +3,9 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 // import { Observable } from 'rxjs';
 import { environment } from '../../../../environments/environment';
+import { Observable } from 'rxjs';
+import { SigninResponse } from '../models/signinResponse.model';
+import { SigninRequest } from '../models/signinRequest.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +15,8 @@ export class AuthServiceService {
 
   constructor(private http: HttpClient) { }
 
-  public login(email: string, password: string){
-    return this.http.post(environment.apiUrl+'User/Login()',{username:email,password:password});
+  public login(data: SigninRequest):Observable<SigninResponse>{
+    return this.http.post<SigninResponse>(environment.apiUrl+'User/Login()',{username:data.Username,password:data.Password});
     // .subscribe((res:any)=> {
     //   localStorage.setItem('access_token',JSON.stringify(res.access_token));
     //   this.router.navigateByUrl('/news');

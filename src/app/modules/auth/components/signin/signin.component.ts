@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import {AuthServiceService} from '../../services/auth-service.service'
+import { SigninRequest } from '../../models/signinRequest.model';
+import { SigninResponse } from '../../models/signinResponse.model';
 
 @Component({
   selector: 'app-signin',
@@ -12,16 +14,16 @@ export class SigninComponent {
 
   constructor(private authServiceService: AuthServiceService,private router:Router) {}
 
-  user:any ={
-    "email":"",
-    "pass":""
+  user:SigninRequest ={
+    Username:"",
+    Password:""
   };
 
   login() {
-    this.authServiceService.login(this.user.email,this.user.pass).subscribe((res:any   //of type signinreq
+    this.authServiceService.login(this.user).subscribe((res:SigninResponse   //of type signinreq
       ) =>{
-      if(res.result) {
-        localStorage.setItem('loginToken',res.data.token);
+      if(res.Result) {
+        localStorage.setItem('loginToken',res.Token);
         this.router.navigateByUrl('/news');
       }
     })
