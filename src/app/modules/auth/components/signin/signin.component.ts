@@ -18,7 +18,8 @@ export class SigninComponent {
   };
 
   login() {
-    this.authServiceService.login(this.user.email,this.user.pass).subscribe((res:any) =>{
+    this.authServiceService.login(this.user.email,this.user.pass).subscribe((res:any   //of type signinreq
+      ) =>{
       if(res.result) {
         localStorage.setItem('loginToken',res.data.token);
         this.router.navigateByUrl('/news');

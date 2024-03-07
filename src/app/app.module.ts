@@ -19,7 +19,8 @@ import { LatestNewsComponent } from './modules/news-feed/components/latest-news/
 import { DialogComponent } from './modules/news-feed/components/dialog/dialog.component';
 import {MatIconModule} from '@angular/material/icon';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { jwtInterceptor } from './modules/auth/services/jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,13 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: jwtInterceptor,
+      multi:true
+    }
+
   ],
   bootstrap: [AppComponent]
 })
