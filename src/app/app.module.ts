@@ -17,8 +17,10 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import {MatInputModule} from '@angular/material/input';
 import { LatestNewsComponent } from './modules/news-feed/components/latest-news/latest-news.component';
 import { DialogComponent } from './modules/news-feed/components/dialog/dialog.component';
-
 import {MatIconModule} from '@angular/material/icon';
+
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { jwtInterceptor } from './modules/auth/services/jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -39,10 +41,17 @@ import {MatIconModule} from '@angular/material/icon';
     MatFormFieldModule,
     FormsModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: jwtInterceptor,
+      multi:true
+    }
+
   ],
   bootstrap: [AppComponent]
 })
