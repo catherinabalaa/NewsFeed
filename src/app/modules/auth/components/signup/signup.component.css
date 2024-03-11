@@ -1,0 +1,25 @@
+.container {
+    height: 10vh;
+    padding-top: 5%;
+}
+
+.title {
+    margin-bottom: 10%;
+    font-size: 45px;
+}
+
+.inputs {
+    font-size: 17px;
+}
+
+.fields {
+    width:20vw;
+}
+
+p{
+    font-size: 10px;
+}
+
+#emailInput {
+    width:42.5vw;
+}

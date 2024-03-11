@@ -1,1 +1,58 @@
-<p>signup works!</p>
+<form class="container">
+    <div class="col-md-6" style="height: 70vh; width:45vw;">
+        <h1 class="title">Create your account.</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <label class="inputs">First Name:</label>
+                <mat-form-field appearance="fill" class="fields">
+                    <input type="text" matInput placeholder="First name" [(ngModel)]="newUser.Firstname" class="inputs"
+                        required>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <label class="inputs">Last Name:</label>
+                <mat-form-field appearance="fill" class="fields">
+                    <input type="text" matInput placeholder="Last name" [(ngModel)]="newUser.Lastname" class="inputs"
+                        required>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label class="inputs">Email:</label>
+                <mat-form-field appearance="fill" class="fields" id="emailInput">
+                    <input type="text" matInput placeholder="Email" [(ngModel)]="newUser.Email" class="inputs" required>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label class="inputs">Password:</label>
+                <mat-form-field appearance="fill" class="fields">
+                    <input type="password" matInput placeholder="Password" [(ngModel)]="newUser.Password" required>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <label class="inputs">Confirm Password:</label>
+                <mat-form-field appearance="fill" class="fields">
+                    <input type="password" matInput placeholder="Confirm password" required>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label class="inputs">Role Name:</label>
+                <mat-form-field appearance="fill" class="fields">
+                    <input type="text" matInput placeholder="Role name" class="inputs" [(ngModel)]="newUser.RoleName"
+                        required>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <button mat-raised-button color="primary" class="btn">Sign up</button>
+                <p> <br>Already have an account? <a routerLink="/auth/signin">Sign In.</a></p>
+            </div>
+        </div>
+    </div>
+</form>
