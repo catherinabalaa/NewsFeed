@@ -1,0 +1,22 @@
+.container {
+    padding-left: 24%; 
+    height: 100vh;
+    padding-top: 15%;
+}
+
+.title {
+    margin-bottom: 10%;
+    font-size: 45px;
+}
+
+.inputs {
+    font-size: 17px;
+}
+
+.fields {
+    width:22vw;
+}
+
+p{
+    font-size: 10px;
+}

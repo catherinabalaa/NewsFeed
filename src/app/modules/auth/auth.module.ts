@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule, formatCurrency } from '@angular/common';
+import { CommonMatModule } from '../common-mat/common-mat.module';
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    CommonMatModule
   ]
 })
 export class AuthModule { }

@@ -8,16 +8,19 @@ import { SignupComponent } from './modules/auth/components/signup/signup.compone
 import { AuthenticaionPageComponent } from './modules/auth/pages/authenticaion-page/authenticaion-page.component';
 import { NewsPageComponent } from './modules/news-feed/pages/news-page/news-page.component';
 
-import {MatButtonModule} from '@angular/material/button';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatCardModule} from '@angular/material/card';
-import { FormsModule } from '@angular/forms';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import {MatInputModule} from '@angular/material/input';
 import { LatestNewsComponent } from './modules/news-feed/components/latest-news/latest-news.component';
 import { DialogComponent } from './modules/news-feed/components/dialog/dialog.component';
+import { FormsModule } from '@angular/forms';
+import { CommonMatModule } from './modules/common-mat/common-mat.module';
+
+import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule, matDialogAnimations} from '@angular/material/dialog';
+import {MatFormFieldModule, matFormFieldAnimations} from '@angular/material/form-field';
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
+
 
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { jwtInterceptor } from './modules/auth/services/jwt.interceptor';
@@ -35,14 +38,15 @@ import { jwtInterceptor } from './modules/auth/services/jwt.interceptor';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    CommonMatModule,
     MatButtonModule,
-    MatCardModule,
     MatDialogModule,
     MatFormFieldModule,
-    FormsModule,
+    MatCardModule,
     MatInputModule,
-    MatIconModule,
-    HttpClientModule
+    MatIconModule
   ],
   providers: [
     provideAnimationsAsync(),

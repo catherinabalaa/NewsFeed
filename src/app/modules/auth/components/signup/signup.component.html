@@ -1,1 +1,39 @@
-<p>signup works!</p>
+<form class="container">
+    <div class="col-sm-4" style="height: 70vh; width:30vw;">
+        <div class="row">
+            <h1 class="title">Create your account.</h1>
+        </div>
+        <div class="row">
+            <label class="inputs">Email</label>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="fill" class="fields">
+                <input type="text" matInput placeholder="Email" class="inputs">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <label class="inputs">Password</label>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="fill" class="fields">
+                <input type="password" matInput placeholder="Password">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <label class="inputs">Confirm Password</label>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="fill" class="fields">
+                <input type="password" matInput placeholder="Password">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button mat-raised-button color="primary" class="btn">Sign up</button>
+            </div>
+            <div class="col">
+                <p> <br>Already have an account? <a routerLink="/auth/signin">Sign In.</a></p>
+            </div>
+        </div>
+    </div>
+</form>
