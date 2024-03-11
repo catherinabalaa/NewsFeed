@@ -5,13 +5,15 @@
             <div class="col-md-6">
                 <label class="inputs">First Name:</label>
                 <mat-form-field appearance="fill" class="fields">
-                    <input type="text" matInput placeholder="First name" class="inputs" required>
+                    <input type="text" matInput placeholder="First name" [(ngModel)]="newUser.Firstname" class="inputs"
+                        required>
                 </mat-form-field>
             </div>
             <div class="col-md-6">
                 <label class="inputs">Last Name:</label>
                 <mat-form-field appearance="fill" class="fields">
-                    <input type="text" matInput placeholder="Last name" class="inputs" required>
+                    <input type="text" matInput placeholder="Last name" [(ngModel)]="newUser.Lastname" class="inputs"
+                        required>
                 </mat-form-field>
             </div>
         </div>
@@ -19,7 +21,7 @@
             <div class="col-md-6">
                 <label class="inputs">Email:</label>
                 <mat-form-field appearance="fill" class="fields" id="emailInput">
-                    <input type="text" matInput placeholder="Email" class="inputs" required>
+                    <input type="text" matInput placeholder="Email" [(ngModel)]="newUser.Email" class="inputs" required>
                 </mat-form-field>
             </div>
         </div>
@@ -27,7 +29,7 @@
             <div class="col-md-6">
                 <label class="inputs">Password:</label>
                 <mat-form-field appearance="fill" class="fields">
-                    <input type="password" matInput placeholder="Password" required>
+                    <input type="password" matInput placeholder="Password" [(ngModel)]="newUser.Password" required>
                 </mat-form-field>
             </div>
             <div class="col-md-6">
@@ -41,7 +43,8 @@
             <div class="col-md-6">
                 <label class="inputs">Role Name:</label>
                 <mat-form-field appearance="fill" class="fields">
-                    <input type="text" matInput placeholder="Role name" class="inputs" required>
+                    <input type="text" matInput placeholder="Role name" class="inputs" [(ngModel)]="newUser.RoleName"
+                        required>
                 </mat-form-field>
             </div>
         </div>

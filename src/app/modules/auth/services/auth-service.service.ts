@@ -7,6 +7,8 @@ import { Observable } from 'rxjs';
 import { SigninResponse } from '../models/signinResponse.model';
 import { SigninRequest } from '../models/signinRequest.model';
 import { LogoutRequest } from '../models/logoutRequest.model';
+import { SignupRequest } from '../models/signupRequest.model';
+import { SignupResponse } from '../models/signupResponse.model';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +24,11 @@ export class AuthServiceService {
     //   localStorage.setItem('access_token',JSON.stringify(res.access_token));
     //   this.router.navigateByUrl('/news');
     // });
+  }
+
+  public signup(data:SignupRequest):Observable<SignupResponse>{
+    return this.http.post<SignupResponse>(environment.apiUrl+'User/SignUp()',
+    {firstname:data.Firstname,lastname:data.Lastname,email:data.Email,password:data.Password,rolename:data.RoleName});    
   }
 
   public getToken() {
