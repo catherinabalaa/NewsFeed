@@ -1,37 +1,53 @@
 <form class="container">
-    <div class="col-sm-4" style="height: 70vh; width:30vw;">
+    <div class="col-md-6" style="height: 70vh; width:45vw;">
+        <h1 class="title">Create your account.</h1>
         <div class="row">
-            <h1 class="title">Create your account.</h1>
-        </div>
-        <div class="row">
-            <label class="inputs">Email</label>
-        </div>
-        <div class="row">
-            <mat-form-field appearance="fill" class="fields">
-                <input type="text" matInput placeholder="Email" class="inputs">
-            </mat-form-field>
-        </div>
-        <div class="row">
-            <label class="inputs">Password</label>
-        </div>
-        <div class="row">
-            <mat-form-field appearance="fill" class="fields">
-                <input type="password" matInput placeholder="Password">
-            </mat-form-field>
-        </div>
-        <div class="row">
-            <label class="inputs">Confirm Password</label>
-        </div>
-        <div class="row">
-            <mat-form-field appearance="fill" class="fields">
-                <input type="password" matInput placeholder="Password">
-            </mat-form-field>
-        </div>
-        <div class="row">
-            <div class="col">
-                <button mat-raised-button color="primary" class="btn">Sign up</button>
+            <div class="col-md-6">
+                <label class="inputs">First Name:</label>
+                <mat-form-field appearance="fill" class="fields">
+                    <input type="text" matInput placeholder="First name" class="inputs" required>
+                </mat-form-field>
             </div>
-            <div class="col">
+            <div class="col-md-6">
+                <label class="inputs">Last Name:</label>
+                <mat-form-field appearance="fill" class="fields">
+                    <input type="text" matInput placeholder="Last name" class="inputs" required>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label class="inputs">Email:</label>
+                <mat-form-field appearance="fill" class="fields" id="emailInput">
+                    <input type="text" matInput placeholder="Email" class="inputs" required>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label class="inputs">Password:</label>
+                <mat-form-field appearance="fill" class="fields">
+                    <input type="password" matInput placeholder="Password" required>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <label class="inputs">Confirm Password:</label>
+                <mat-form-field appearance="fill" class="fields">
+                    <input type="password" matInput placeholder="Confirm password" required>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label class="inputs">Role Name:</label>
+                <mat-form-field appearance="fill" class="fields">
+                    <input type="text" matInput placeholder="Role name" class="inputs" required>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <button mat-raised-button color="primary" class="btn">Sign up</button>
                 <p> <br>Already have an account? <a routerLink="/auth/signin">Sign In.</a></p>
             </div>
         </div>
