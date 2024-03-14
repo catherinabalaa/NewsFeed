@@ -15,8 +15,8 @@ export class SigninComponent {
   constructor(private authServiceService: AuthServiceService,private router:Router) {}
 
   user:SigninRequest ={
-    Username:"",
-    Password:""
+    Username:'',
+    Password:''
   };
 
   login() {
@@ -40,8 +40,8 @@ export class SigninComponent {
   //   )
   // }
 
-  // logout() {
-  //   localStorage.clear();
-  //   this.router.navigateByUrl('/auth/signin');
-  // }
+  logout() {
+    localStorage.clear();
+    this.router.navigateByUrl('/auth/signin');
+  }
 }
