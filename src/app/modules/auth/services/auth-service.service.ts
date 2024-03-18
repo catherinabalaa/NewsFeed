@@ -19,12 +19,11 @@ export class AuthServiceService {
   constructor(private http: HttpClient) { }
 
   public login(data: SigninRequest):Observable<SigninResponse>{
-    return this.http.post<SigninResponse>(environment.apiUrl+'User/Login()',{username:data.Username,password:data.Password});
+    return this.http.post<SigninResponse>(environment.apiUrl+'User/Login()',data);
   }
 
   public signup(data:SignupRequest):Observable<SignupResponse>{
-    return this.http.post<SignupResponse>(environment.apiUrl+'User/SignUp()',
-    {firstname:data.Firstname,lastname:data.Lastname,email:data.Email,password:data.Password,rolename:data.RoleName});    
+    return this.http.post<SignupResponse>(environment.apiUrl+'User/SignUp()',data);    
   }
 
   public getToken() {
