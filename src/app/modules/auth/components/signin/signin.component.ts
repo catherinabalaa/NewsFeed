@@ -20,7 +20,7 @@ export class SigninComponent {
   };
 
   login() {
-    this.authServiceService.login(this.user).subscribe((res:SigninResponse   //of type signinreq
+    this.authServiceService.login(this.user).subscribe((res:SigninResponse 
       ) =>{
       if(res.Result) {
         localStorage.setItem('loginToken',res.Token);
@@ -32,13 +32,6 @@ export class SigninComponent {
       }
     })
   }
-
-  // logout() {
-  //   this.authServiceService.logout(this.authServiceService.getToken(),this.authServiceService.getRefreshToken()).subscribe(
-  //     localStorage.clear();
-  //     this.router.navigateByUrl('/auth/signin');
-  //   )
-  // }
 
   logout() {
     localStorage.clear();

@@ -8,7 +8,8 @@
         </div>
         <div class="row">
             <mat-form-field appearance="fill" class="fields">
-                <input type="text" matInput placeholder="Email" [(ngModel)]="user.Username" class="inputs">
+                <input type="text" matInput placeholder="Email" [(ngModel)]="user.Username" class="inputs"
+                    [ngModelOptions]="{standalone: true}">
             </mat-form-field>
         </div>
         <div class="row">
@@ -16,7 +17,8 @@
         </div>
         <div class="row">
             <mat-form-field appearance="fill" class="fields">
-                <input type="password" [(ngModel)]="user.Password" matInput placeholder="Password">
+                <input type="password" [(ngModel)]="user.Password" matInput placeholder="Password"
+                    [ngModelOptions]="{standalone: true}">
             </mat-form-field>
         </div>
         <div class="row">

@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-// import { Observable } from 'rxjs';
 import { environment } from '../../../../environments/environment';
 import { Observable } from 'rxjs';
 import { SigninResponse } from '../models/signinResponse.model';
@@ -19,16 +18,11 @@ export class AuthServiceService {
   constructor(private http: HttpClient) { }
 
   public login(data: SigninRequest):Observable<SigninResponse>{
-    return this.http.post<SigninResponse>(environment.apiUrl+'User/Login()',{username:data.Username,password:data.Password});
-    // .subscribe((res:any)=> {
-    //   localStorage.setItem('access_token',JSON.stringify(res.access_token));
-    //   this.router.navigateByUrl('/news');
-    // });
+    return this.http.post<SigninResponse>(environment.apiUrl+'User/Login()',data);
   }
 
   public signup(data:SignupRequest):Observable<SignupResponse>{
-    return this.http.post<SignupResponse>(environment.apiUrl+'User/SignUp()',
-    {firstname:data.Firstname,lastname:data.Lastname,email:data.Email,password:data.Password,rolename:data.RoleName});    
+    return this.http.post<SignupResponse>(environment.apiUrl+'User/SignUp()',data);    
   }
 
   public getToken() {
@@ -37,7 +31,7 @@ export class AuthServiceService {
 
   public logout(token:string,refreshToken:string):Observable<LogoutRequest> {
     return this.http.post<LogoutRequest>(environment.apiUrl+'User/Logout()',{Token:token,RefreshToken:refreshToken});
-  } //do we need it?
+  }
 
   public getRefreshToken() {
     return localStorage.getItem('refreshtoken');
