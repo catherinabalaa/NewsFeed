@@ -20,10 +20,6 @@ export class AuthServiceService {
 
   public login(data: SigninRequest):Observable<SigninResponse>{
     return this.http.post<SigninResponse>(environment.apiUrl+'User/Login()',{username:data.Username,password:data.Password});
-    // .subscribe((res:any)=> {
-    //   localStorage.setItem('access_token',JSON.stringify(res.access_token));
-    //   this.router.navigateByUrl('/news');
-    // });
   }
 
   public signup(data:SignupRequest):Observable<SignupResponse>{
@@ -37,7 +33,7 @@ export class AuthServiceService {
 
   public logout(token:string,refreshToken:string):Observable<LogoutRequest> {
     return this.http.post<LogoutRequest>(environment.apiUrl+'User/Logout()',{Token:token,RefreshToken:refreshToken});
-  } //do we need it?
+  }
 
   public getRefreshToken() {
     return localStorage.getItem('refreshtoken');
