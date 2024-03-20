@@ -1,7 +1,19 @@
 <div class="container-fluid">
     <h2 class="headline">Latest news</h2>
     <div class="col-md-3">
-        <mat-card class="card">
+        <mat-card class="card" *ngFor="let article of articles">
+            <mat-card-header>
+            </mat-card-header>
+            <img mat-card-image
+                [src]="'https://www.nytimes.com/' + article.multimedia?.[0]?.url || 'https://via.placeholder.com/150'">
+            <mat-card-content>
+                {{article.snippet}}
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" (click)="openDialog(article)">View more</button>
+            </mat-card-actions>
+        </mat-card>
+        <!-- <mat-card class="card">
             <mat-card-header>
             </mat-card-header>
             <img mat-card-image src='../../../../../assets/images/background.jpeg' alt="" class="img">
@@ -62,6 +74,6 @@
             <mat-card-actions>
                 <button mat-raised-button color="primary" (click)="openDialog()">View more</button>
             </mat-card-actions>
-        </mat-card>
+        </mat-card> -->
     </div>
 </div>

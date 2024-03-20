@@ -1,26 +1,22 @@
 <mat-dialog-content>
     <div class="row">
         <div class="col-sm-6">
-            <img mat-card-image src='../../../../../assets/images/background.jpeg' alt="" class="img">
+            <img mat-card-image
+                [src]="'https://www.nytimes.com/' + data.multimedia?.[0]?.url || 'https://via.placeholder.com/150'">
         </div>
         <div class="col-sm-6">
             <button mat-icon-button style="float: right;" matDialogClose>
                 <mat-icon>close</mat-icon>
             </button>
-            <h3>Headline</h3>
-            <h5>By Jone Doe</h5>
-            <p id="date">Posted on 29/2/2024</p>
+            <h3>{{data.headline.main}}</h3>
+            <h5>{{data.byline.original}}</h5>
+            <p id="date">Posted on {{data.pub_date}}</p>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum
-                dolor
-                sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet,
-                consectetur
-                adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed
-                do eiusmod tempor.
+                {{data.snippet}}
             </p>
             <mat-dialog-actions>
-                <button class="goto" mat-raised-button color="primary">Go to article</button>
+                <span><a href="{{data.web_url}}" target="_blank"><button class="goto" mat-raised-button
+                            color="primary">Go to article</button></a></span>
             </mat-dialog-actions>
         </div>
     </div>
