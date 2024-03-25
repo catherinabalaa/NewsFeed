@@ -1,8 +1,7 @@
 .img {
     border-radius: 5%;
     margin-top: 7%;
-    max-width: 40vh;
-    margin-left: 7%;
+    margin-left: 10%;
     position: absolute;
 }
 
@@ -33,8 +32,4 @@ p{
 
 .goto {
     margin-left: -3%;
-}
-
-.container {
-    background-color: aqua;
 }

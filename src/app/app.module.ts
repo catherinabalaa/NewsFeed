@@ -20,7 +20,7 @@ import {MatFormFieldModule, matFormFieldAnimations} from '@angular/material/form
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { jwtInterceptor } from './modules/auth/services/jwt.interceptor';
@@ -46,7 +46,8 @@ import { jwtInterceptor } from './modules/auth/services/jwt.interceptor';
     MatFormFieldModule,
     MatCardModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    FlexLayoutModule
   ],
   providers: [
     provideAnimationsAsync(),

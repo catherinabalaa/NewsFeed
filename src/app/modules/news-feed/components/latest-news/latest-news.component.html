@@ -1,79 +1,33 @@
-<div class="container-fluid">
+<div class="full-content" style="max-width: 1440px; width: 100%; margin: auto;">
     <h2 class="headline">Latest news</h2>
-    <div class="col-md-3">
-        <mat-card class="card" *ngFor="let article of articles">
-            <mat-card-header>
-            </mat-card-header>
-            <img mat-card-image
-                [src]="'https://www.nytimes.com/' + article.multimedia?.[0]?.url || 'https://via.placeholder.com/150'">
-            <mat-card-content>
-                {{article.snippet}}
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-raised-button color="primary" (click)="openDialog(article)">View more</button>
-            </mat-card-actions>
-        </mat-card>
-        <!-- <mat-card class="card">
-            <mat-card-header>
-            </mat-card-header>
-            <img mat-card-image src='../../../../../assets/images/background.jpeg' alt="" class="img">
-            <mat-card-content>
-                <mat-card-title>Headline</mat-card-title>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                </p>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-raised-button color="primary" (click)="openDialog()">View more</button>
-            </mat-card-actions>
-        </mat-card>
+    <div style="display: flex;flex-direction: row; column-gap: 20px;">
+        <div *ngFor="let article of articles">
+            <mat-card class="card" style="flex: 1;">
+                <mat-card-header>
+                </mat-card-header>
+                <img mat-card-image style="object-fit: cover; width: 100%;"
+                    [src]="'https://www.nytimes.com/' + article.multimedia?.[0]?.url || 'https://via.placeholder.com/150'">
+                <mat-card-content>
+                    {{article.snippet}}
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="openDialog(article)">View more</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+        <!-- <div fxLayout="row wrap">
+        <div fxFlex="25%" id="flxlayout" *ngFor="let article of articles">
+            <mat-card class="card">
+                <mat-card-header>
+                </mat-card-header>
+                <img mat-card-image
+                    [src]="'https://www.nytimes.com/' + article.multimedia?.[0]?.url || 'https://via.placeholder.com/150'">
+                <mat-card-content>
+                    {{article.snippet}}
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="openDialog(article)">View more</button>
+                </mat-card-actions>
+            </mat-card>
+        </div> -->
     </div>
-    <div class="col-md-3">
-        <mat-card class="card">
-            <mat-card-header>
-            </mat-card-header>
-            <img mat-card-image src='../../../../../assets/images/background.jpeg' alt="" class="img">
-            <mat-card-content>
-                <mat-card-title>Headline</mat-card-title>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                </p>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-raised-button color="primary" (click)="openDialog()">View more</button>
-            </mat-card-actions>
-        </mat-card>
-    </div>
-    <div class="col-md-3">
-        <mat-card class="card">
-            <mat-card-header>
-            </mat-card-header>
-            <img mat-card-image src='../../../../../assets/images/background.jpeg' alt="" class="img">
-            <mat-card-content>
-                <mat-card-title>Headline</mat-card-title>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                </p>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-raised-button color="primary" (click)="openDialog()">View more</button>
-            </mat-card-actions>
-        </mat-card>
-    </div>
-    <div class="col-md-3">
-        <mat-card class="card">
-            <mat-card-header>
-            </mat-card-header>
-            <img mat-card-image src='../../../../../assets/images/background.jpeg' alt="" class="img">
-            <mat-card-content>
-                <mat-card-title>Headline</mat-card-title>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                </p>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-raised-button color="primary" (click)="openDialog()">View more</button>
-            </mat-card-actions>
-        </mat-card> -->
-    </div>
-</div>
