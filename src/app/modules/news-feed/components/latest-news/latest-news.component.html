@@ -1,11 +1,11 @@
 <div class="full-content" style="max-width: 1440px; width: 100%; margin: auto;">
     <h2 class="headline">Latest news</h2>
     <div style="display: flex;flex-direction: row; column-gap: 20px;">
-        <div *ngFor="let article of articles">
-            <mat-card class="card" style="flex: 1;">
+        <div *ngFor="let article of articles" style=" display:flex; flex: 1;">
+            <mat-card class="card" style="flex:1;">
                 <mat-card-header>
                 </mat-card-header>
-                <img mat-card-image style="object-fit: cover; width: 100%;"
+                <img mat-card-image style="object-fit: cover; width: 100%; height:30vh;"
                     [src]="'https://www.nytimes.com/' + article.multimedia?.[0]?.url || 'https://via.placeholder.com/150'">
                 <mat-card-content>
                     {{article.snippet}}
