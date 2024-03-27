@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
+import { NewsService } from '../../services/news.service';
 
 @Component({
   selector: 'app-latest-news',
@@ -8,9 +9,19 @@ import { DialogComponent } from '../dialog/dialog.component';
   styleUrl: './latest-news.component.css'
 })
 export class LatestNewsComponent {
-  constructor(private matDialog:MatDialog) {}
 
-  openDialog() {
-    this.matDialog.open(DialogComponent);
+  articles:any[];
+  constructor(private matDialog:MatDialog,private newsService:NewsService) {}
+
+  ngOnInit():void {
+    this.newsService.getLatestNews().subscribe(res=>{
+      this.articles=res.response.docs.slice(0,4);
+    })
+  }
+
+  openDialog(article) {
+    this.matDialog.open(DialogComponent,{
+      data:article
+    });
   }
 }

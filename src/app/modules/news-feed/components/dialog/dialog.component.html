@@ -1,27 +1,25 @@
-<mat-dialog-content>
-    <div class="row">
-        <div class="col-sm-6">
-            <img mat-card-image src='../../../../../assets/images/background.jpeg' alt="" class="img">
+<div class="full-content" style="max-width: 1440px; width: 100%; margin: auto;">
+    <mat-dialog-content>
+        <div style="display: flex;flex-direction: row; column-gap: 20px;">
+            <div>
+                <img mat-card-image style="max-width: 45vh; margin-top: 5%;"
+                    [src]="'https://www.nytimes.com/' + data.multimedia?.[0]?.url || 'https://via.placeholder.com/150'">
+            </div>
+            <div>
+                <button mat-icon-button style="float: right;" matDialogClose>
+                    <mat-icon>close</mat-icon>
+                </button>
+                <h3>{{data.headline.main}}</h3>
+                <h5>{{data.byline.original}}</h5>
+                <p id="date">Posted on {{data.pub_date}}</p>
+                <p>
+                    {{data.snippet}}
+                </p>
+                <mat-dialog-actions>
+                    <span><a href="{{data.web_url}}" target="_blank"><button class="goto" mat-raised-button
+                                color="primary">Go to article</button></a></span>
+                </mat-dialog-actions>
+            </div>
         </div>
-        <div class="col-sm-6">
-            <button mat-icon-button style="float: right;" matDialogClose>
-                <mat-icon>close</mat-icon>
-            </button>
-            <h3>Headline</h3>
-            <h5>By Jone Doe</h5>
-            <p id="date">Posted on 29/2/2024</p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum
-                dolor
-                sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet,
-                consectetur
-                adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed
-                do eiusmod tempor.
-            </p>
-            <mat-dialog-actions>
-                <button class="goto" mat-raised-button color="primary">Go to article</button>
-            </mat-dialog-actions>
-        </div>
-    </div>
-</mat-dialog-content>
+    </mat-dialog-content>
+</div>
