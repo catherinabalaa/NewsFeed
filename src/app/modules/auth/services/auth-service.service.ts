@@ -25,6 +25,16 @@ export class AuthServiceService {
     return this.http.post<SignupResponse>(environment.apiUrl+'User/SignUp()',data);    
   }
 
+  public storeUserData(token:string,username:string): void {
+    localStorage.setItem('token',token);
+    localStorage.setItem('username',username);
+    // localStorage.setItem('lname',lname);
+  }
+
+  public getName():string {
+    return localStorage.getItem('fname')+' '+localStorage.getItem('lname');
+  }
+
   public getToken() {
     return localStorage.getItem(this.tokenKey);
   }

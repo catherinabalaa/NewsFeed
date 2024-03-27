@@ -26,6 +26,7 @@ export class SigninComponent {
         localStorage.setItem('loginToken',res.Token);
         localStorage.setItem('refreshToken',res.RefreshToken);
         this.router.navigateByUrl('/news');
+        this.authServiceService.storeUserData(res.Token,this.user.Username);
       }
       else {
         alert("Username or password incorrect");
