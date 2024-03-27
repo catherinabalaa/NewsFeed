@@ -28,6 +28,7 @@ export class SignupComponent {
         localStorage.setItem('loginToken',res.Token);
         localStorage.setItem('refreshToken',res.RefreshToken);
         this.router.navigateByUrl('/news');
+        this.authService.storeUserData(res.Token,this.newUser.Firstname+' '+this.newUser.Lastname);
       }
       else {
         alert("Please fill out all the fields.");
